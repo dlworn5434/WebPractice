@@ -1,0 +1,121 @@
+body {
+    font-family: Roboto, Arial; /* 웹사이트에서 사용할 기본 글꼴을 설정합니다. */
+    margin: 0; /* body의 기본 여백을 제거합니다. */
+    background-color: #181818; /* 웹사이트의 배경 색상을 어두운 회색으로 설정합니다. */
+    color: white; /* 기본 텍스트 색상을 흰색으로 설정합니다. */
+}
+
+.header {
+    position: fixed; /* 헤더를 고정 위치에 둬서 스크롤 시에도 항상 보이도록 설정합니다. */
+    width: 100%; /* 헤더의 너비를 브라우저 창 전체 크기로 설정합니다. */
+    top: 200; /* 헤더의 상단 위치를 설정합니다. 여기서는 유효한 단위(px, % 등)가 빠졌습니다. */
+    padding: 20px; /* 헤더 내부의 여백을 설정합니다. */
+    display: flex; /* 헤더 내부 요소들을 플렉스 박스로 배치합니다. */
+    justify-content: space-between; /* 플렉스 아이템들을 양 끝에 배치합니다. */
+    align-items: center; /* 플렉스 아이템들을 중앙 정렬합니다. */
+    background-color: transparent; /* 헤더 배경색을 투명하게 설정합니다. */
+    z-index: 10; /* 헤더를 다른 요소들 위에 표시하도록 z-index 값을 설정합니다. */
+}
+
+.banner {
+    position: relative; /* 배너를 상대 위치에 둡니다. 이것은 내부 절대 위치 요소들의 기준이 됩니다. */
+    height: 600px; /* 배너의 높이를 설정합니다. */
+    background-image: url('image/배너1.jpg'); /* 배너의 배경 이미지를 설정합니다. */
+    background-position: center center; /* 배경 이미지를 중앙에 위치시킵니다. */
+    background-size: cover; /* 배경 이미지가 컨테이너를 꽉 채우도록 조정합니다. */
+    display: flex; /* 배너 내부 요소들을 플렉스 박스로 배치합니다. */
+    align-items: flex-end; /* 플렉스 아이템들을 배너 하단에 정렬합니다. */
+    justify-content: center; /* 플렉스 아이템들을 중앙에 배치합니다. */
+    overflow: hidden; /* 내부 요소가 배너를 넘어갈 경우 숨깁니다. */
+}
+
+
+.banner-text {
+    position: absolute; /* 절대 위치 지정 */
+    top: 25px; /* 상단에서 25px 아래로 */
+    left: 10px; /* 왼쪽에서 10px 안쪽으로 */
+    color: red; /* 텍스트 색상을 빨간색으로 설정 */
+    font-size: 30px; /* 텍스트 크기 조정 */ 
+    font-weight: bold; /* 텍스트 굵게 */
+}
+.banner-content { /*배너 글이랑 버튼 부분*/
+    position: absolute;
+    top: 50%; /*배너 중간부분 위에서 50% */
+    left: 10px; /*왼쪽에서 10필셀정도 옆으로*/
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+    z-index: 5;
+}
+
+.banner-title { /* 배너 Money Heist 써있는 부분 */
+    font-size: 3.5rem;
+    font-weight: bold; /* 글꼴 굵게*/
+    margin-bottom: 1rem; /* 마진 주기 */
+}
+
+.banner-description { /* 배너 설명글 긴 부분 */
+    font-size: 1.2rem;
+    line-height: 1.4;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.banner-buttons {
+    display: flex;
+}
+
+.banner-button {
+    padding: 10px 40px;
+    margin-right: 20px;
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    background-color: #e50982;
+}
+
+.profile-icon {
+    position: absolute; /* 절대 위치 지정 */
+    right: 50px; /* 오른쪽에서 10px 떨어진 곳에 위치 */
+    top: 25px; /* 상단에서 25px 떨어진 곳에 위치 */
+    width: 35px;
+    height: 35px;
+    background-image: url('image/사랑이.jpg');
+    background-size: cover;
+    border-radius: 50%; /*그냥 둥글게 하고싶었습니다 */
+    cursor: pointer;
+}
+
+.poster-row {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 50px;
+}
+
+.poster {
+    width: 200px;
+    height: 300px;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+    transition: transform 0.7s ease;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .poster {
+        width: 100px;
+        height: 150px;
+  }
+}
